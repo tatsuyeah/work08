@@ -2,9 +2,11 @@
 //登録のテンプレとして...
 
 //1.入力した値をとる
-$name    = $_POST["name"];
-$url     = $_POST["url"];
-$comment = $_POST["comment"];
+$name      = $_POST["name"];
+$lid       = $_POST["lid"];
+$lpw       = $_POST["lpw"];
+$kanri_flg = $_POST["kanri_flg"];
+$life_flg  = $_POST["life_flg"];
 
 //2.DB接続
 try {
@@ -16,10 +18,16 @@ try {
 
 //3.SQLを作って実行
 //3-1.データ登録SQL作成
-$stmt = $pdo->prepare("INSERT INTO gs_bm_table(id, name, url, comment, indate)VALUES(NULL, :name, :url, :comment, sysdate())");
-$stmt->bindValue(':name', $name, PDO::PARAM_STR); 
-$stmt->bindValue(':url', $url, PDO::PARAM_STR);
-$stmt->bindValue(':comment', $comment, PDO::PARAM_STR);
+$stmt = $pdo->prepare("
+INSERT INTO gs_user_table(id, name, lid, lpw, kanri_flg, life_flg)
+VALUES(NULL, :name, :lid, :lpw, :kanri_flg, :life_flg)
+");
+$stmt->bindValue(':name', $name);
+$stmt->bindValue(':lid', $lid);
+$stmt->bindValue(':lpw', $lpw);
+$stmt->bindValue(':kanri_flg', $kanri_flg);
+$stmt->bindValue(':life_flg', $life_flg);
+
 //3-2.実行
 $status = $stmt->execute();
 
