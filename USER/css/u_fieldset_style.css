@@ -1,17 +1,19 @@
-#fs{
+form{
     margin: 0;
     padding: 0;
 }
+fieldset#fs{
+    width: 720;
+}
 
 legend{
-    border: none;
-    margin: 0;
     text-align: center;
-    
+    border: none;
 }
+
 fieldset ol{
     display: block;
-    width: 500px;
+    width: 600px;
     margin: 20px auto 40px;
     padding: 0;
     
@@ -22,12 +24,6 @@ fieldset ol li{
     padding: 16px;
     list-style: none;
     border-bottom: 1px solid #aaaaaa;
-}
-
-fieldset ol li label{
-    display: block;
-    width: 200px;
-    margin: 0;
 }
 
 input[type=submit],

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>本をブックマークするデータベース｜管理ユーザー追加</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-<!--    <link rel="stylesheet" href="css/fieldset_style.css">-->
+    <link rel="stylesheet" href="css/u_fieldset_style.css">
     <style>div{padding: 10px;font-size:16px;}</style>
 </head>
 
@@ -26,21 +26,21 @@
     <fieldset id="fs">
         <legend>管理ユーザー追加</legend>
             <ol>
-            <li>
-                <label>名前</label>
-                <input type="text" name="name" size="50">
+            <li class="list">
+                <label style="display:inline-block; width:200px;">名前</label>
+                <input type="text" name="name" size="50" style="display:inline;">
             </li>
-            <li>
-                <label>ログインID</label>
-                <input type="text" name="lid" size="50">
+            <li class="list">
+                <label style="display:inline-block; width:200px;">ログインID</label>
+                <input type="text" name="lid" size="50" style="display:inline;">
             </li>
-            <li>
-                <label>ログインパスワード</label>
-                <input type="password" name="lpw" size="50">
+            <li class="list">
+                <label style="display:inline-block; width:200px;">ログインパスワード</label>
+                <input type="password" name="lpw" size="50" style="display:inline;">
             </li>
             <li class="radiobtn">
-                <label>管理者権限</label>
-                   <div id="btn">
+                <label style="display:inline-block; width:200px;">管理者権限</label>
+                   <div  style="display:inline;">
                     <p style="display:inline-block; width:120px; font-size: 16px;">
                         <input type="radio" value="0" name="kanri_flg" checked>管理者
                     </p>
@@ -50,8 +50,8 @@
                    </div>
             </li>
             <li class="radiobtn">
-                <label>ステータス</label>
-                   <div>
+                <label style="display:inline-block; width:200px;">ステータス</label>
+                   <div style="display:inline;">
                     <p style="display:inline-block; width:120px; font-size: 16px;">
                         <input type="radio" value="0" name="life_flg" checked>使用する
                     </p>
