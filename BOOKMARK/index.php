@@ -39,7 +39,7 @@
             </ol>
         <input type="submit" value="送信">
     </fieldset>
-    <input type="button" value="登録済みのリストを表示" onClick="location.href='bm_list_view'">
+    <input type="button" value="登録済みのリストを表示" onClick="location.href='bm_list_view.php'">
   </div>
 </form>
 <!-- Main[End] -->
